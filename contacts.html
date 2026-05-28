@@ -4,95 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Контакти туристичного сайту міста Стрий">
+    <meta name="description" content="Контакти туристичного сайту Стрия">
     <meta name="keywords" content="Стрий, контакти, форма, карта">
     <meta name="author" content="Студент">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#2f5d62">
-
     <title>Контакти</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="top">
     <header class="site-header">
-        <h1>Контакти</h1>
-        <p>Форма зворотного зв’язку та карта міста</p>
+        <h1 class="site-header__title">Контакти</h1>
+        <p class="site-header__text">Форма зворотного зв’язку та карта міста</p>
 
-        <nav class="main-nav">
-            <ul class="menu">
-                <li><a href="index.html">Головна</a></li>
-                <li class="dropdown">
-                    <a href="places.html">Цікаві місця</a>
-                    <ul class="submenu">
-                        <li><a href="places.html#center">Центр міста</a></li>
-                        <li><a href="places.html#parks">Парки</a></li>
-                        <li><a href="places.html#architecture">Архітектура</a></li>
-                    </ul>
-                </li>
-                <li><a href="contacts.html">Контакти</a></li>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Головна</a></li>
+                <li class="nav__item"><a class="nav__link" href="places.html">Цікаві місця</a></li>
+                <li class="nav__item"><a class="nav__link" href="route.html">Маршрут</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакти</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="page">
-        <section class="content-block">
-            <h2>Зворотний зв’язок</h2>
-            <p>
-                Заповніть форму, якщо хочете поставити питання або запропонувати
-                місце для додавання на сайт.
-            </p>
+    <div class="fixed-badge">Контакт</div>
 
-            <form action="#" method="post" class="contact-form">
-                <label for="name">Ім’я:</label>
-                <input type="text" id="name" name="name" required maxlength="40" placeholder="Введіть ваше ім’я">
+    <main class="contact-grid">
+        <section class="contact-grid__form card">
+            <h2 class="card__title">Зворотний зв’язок</h2>
 
-                <label for="email">Електронна пошта:</label>
-                <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+            <form action="#" method="post" class="form">
+                <label class="form__label" for="name">Ім’я:</label>
+                <input class="form__field" type="text" id="name" name="name" required maxlength="40">
 
-                <label for="phone">Телефон:</label>
-                <input type="tel" id="phone" name="phone" required pattern="[0-9+() -]{10,20}"
-                    placeholder="+380 XX XXX XX XX">
+                <label class="form__label" for="email">Email:</label>
+                <input class="form__field" type="email" id="email" name="email" required>
 
-                <label for="site">Ваш сайт або сторінка:</label>
-                <input type="url" id="site" name="site" placeholder="https://example.com">
+                <label class="form__label" for="phone">Телефон:</label>
+                <input class="form__field" type="tel" id="phone" name="phone" pattern="[0-9+() -]{10,20}" required>
 
-                <label for="date">Дата поїздки:</label>
-                <input type="datetime-local" id="date" name="date" required>
+                <label class="form__label" for="site">Сайт:</label>
+                <input class="form__field" type="url" id="site" name="site">
 
-                <label for="message">Повідомлення:</label>
-                <textarea id="message" name="message" rows="6" maxlength="350" required
-                    placeholder="Напишіть ваше повідомлення"></textarea>
+                <label class="form__label" for="date">Дата поїздки:</label>
+                <input class="form__field" type="datetime-local" id="date" name="date" required>
 
-                <button type="submit">Надіслати</button>
-                <button type="reset">Очистити</button>
+                <label class="form__label" for="message">Повідомлення:</label>
+                <textarea class="form__field form__field_textarea" id="message" name="message" rows="6" maxlength="350"
+                    required></textarea>
+
+                <button class="form__button" type="submit">Надіслати</button>
+                <button class="form__button form__button_reset" type="reset">Очистити</button>
             </form>
         </section>
 
-        <section class="content-block">
-            <h2>Карта міста</h2>
-            <p>
-                Нижче розміщено фрейм з картою. Для цього використано тег
-                <code>&lt;iframe&gt;</code>.
-            </p>
+        <section class="contact-grid__map card">
+            <h2 class="card__title">Карта міста</h2>
 
-            <iframe class="map-frame"
+            <iframe class="map"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=23.819%2C49.245%2C23.880%2C49.275&amp;layer=mapnik"
                 title="Карта міста Стрий">
             </iframe>
         </section>
 
-        <aside class="side-note">
-            <h2>Контактна інформація</h2>
-            <p><strong>Місто:</strong> Стрий</p>
-            <p><strong>Область:</strong> Львівська область</p>
-            <p><strong>Email:</strong> stryj-tour@example.com</p>
+        <aside class="contact-grid__aside aside">
+            <h2 class="aside__title">Інформація</h2>
+            <p class="aside__text"><strong>Місто:</strong> Стрий</p>
+            <p class="aside__text"><strong>Область:</strong> Львівська область</p>
+            <p class="aside__text"><strong>Email:</strong> stryj-tour@example.com</p>
         </aside>
     </main>
 
-    <footer class="site-footer">
-        <p>&copy; 2026 Туристичний сайт міста Стрий</p>
-        <p>
+    <footer class="footer">
+        <p class="footer__text">
             <a href="index.html">На головну</a> |
             <a href="#top">До початку сторінки</a>
         </p>

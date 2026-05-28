@@ -4,125 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Туристичний вебсайт міста Стрий">
-    <meta name="keywords" content="Стрий, туризм, Львівська область, цікаві місця, подорожі">
+    <meta name="description" content="Туристичний сайт міста Стрий з CSS Grid">
+    <meta name="keywords" content="Стрий, туризм, CSS Grid, адаптивність">
     <meta name="author" content="Студент">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#2f5d62">
-
-    <meta property="og:title" content="Туристичний сайт міста Стрий">
-    <meta property="og:description" content="Інформаційний сайт про місто Стрий">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="uk_UA">
-    <title>Стрий Туристичний</title>
+    <title>Стрий туристичний | Grid</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="top">
-
     <header class="site-header">
-        <h1>Труистичний сайт міста Стрий</h1>
-        <p>Короткий онлайн-довідник для гостей та мешканців міста</p>
+        <h1 class="site-header__title">Туристичний сайт міста Стрий</h1>
+        <p class="site-header__text">Адаптивний сайт, створений за допомогою CSS Grid Layout</p>
 
-        <nav class="main-nav">
-            <ul class="menu">
-                <li><a href="index.html">Головна</a></li>
-                <li class="dropdown">
-                    <a href="places.html">Цікаві міста</a>
-                    <ul class="submenu">
-                        <li><a href="places.html#center">Центр міста</a></li>
-                        <li><a href="places.html#parks"></a>Парки</li>
-                        <li><a href="places.html#architecture"></a>Архітектура</li>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Головна</a></li>
+
+                <li class="nav__item nav__item_dropdown">
+                    <a class="nav__link" href="places.html">Цікаві місця</a>
+                    <ul class="nav__submenu">
+                        <li><a class="nav__sublink" href="places.html#center">Центр</a></li>
+                        <li><a class="nav__sublink" href="places.html#parks">Парки</a></li>
+                        <li><a class="nav__sublink" href="places.html#architecture">Архітектура</a></li>
                     </ul>
                 </li>
-                <li><a href="contacts.html">Контакти</a></li>
-                <li><a href="#info"></a>Корисна інформація</li>
+
+                <li class="nav__item"><a class="nav__link" href="route.html">Маршрут</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакти</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="page">
-        <section class="hero">
-            <h2>Ласкаво просимо до Стрия</h2>
-            <p>
-                <strong>Стрий</strong> - місто у Львівській області, яке має зручне
-                розташування, цікаву історію та спокійну атмосферу для прогулянок.
-            </p>
-            <img src="images/stryj-main.jpg" alt="Вид міста Стрий" class="main-image">
-            <p>
-                На цьому сайті можна знайти коротку інформацію про місто,
-                цікаві місця та контакти для зворотного зв’язку.
+    <div class="fixed-badge">Стрий</div>
+
+    <main class="layout layout_home">
+        <section class="layout__hero card">
+            <h2 class="card__title">Ласкаво просимо до Стрия</h2>
+            <img class="card__image" src="images/stryj-main.jpg" alt="Вид міста Стрий">
+            <p class="card__text">
+                Стрий — місто у Львівській області, яке має зручне розташування,
+                цікаву історію та спокійну атмосферу для прогулянок.
             </p>
         </section>
 
-        <section id="about" class="content-block">
-            <h2>Про сайт</h2>
+        <section class="layout__section card">
+            <h2 class="card__title">Про сайт</h2>
 
-            <article>
-                <h3>Мета сайту</h3>
-                <p>
-                    Мета цього вебсайту — представити <em>туристичну інформацію</em>
-                    про місто Стрий у зручному вигляді. Сайт складається з трьох
-                    взаємопов’язаних сторінок.
+            <article class="article">
+                <h3 class="article__title">Мета роботи</h3>
+                <p class="article__text">
+                    У другій лабораторній роботі контент сторінок розміщується
+                    за допомогою CSS Grid Layout. Також використано БЕМ-класи
+                    та медіа-запити для адаптивності.
                 </p>
             </article>
 
-            <article>
-                <h3></h3>
-
-                <p>
-                    Для розмітки сторінок використано семантичні елементи HTML5:
-                    <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
-                    <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>,
-                    <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>,
-                    <code>&lt;footer&gt;</code>.
+            <article class="article">
+                <h3 class="article__title">Структура</h3>
+                <p class="article__text">
+                    Сайт має головну сторінку, сторінку цікавих місць,
+                    сторінку маршруту та сторінку контактів.
                 </p>
             </article>
-
-            <h4>Основні розділи</h4>
-            <h5>Навігація</h5>
-            <h6>Сторінки сайту</h6>
-
-            <ol>
-                <li>
-                    Головна сторінка
-                    <ul>
-                        <li>короткий опис міста;</li>
-                        <li>зображення;</li>
-                        <li>таблиця з інформацією.</li>
-                    </ul>
-                </li>
-                <li>
-                    Сторінка цікавих місць
-                    <ul>
-                        <li>парк;</li>
-                        <li>центр;</li>
-                        <li>архітектурні об’єкти.</li>
-                    </ul>
-                </li>
-                <li>
-                    Сторінка контактів
-                    <ul>
-                        <li>форма зворотного зв’язку;</li>
-                        <li>карта міста;</li>
-                        <li>контактна інформація.</li>
-                    </ul>
-                </li>
-            </ol>
         </section>
 
-        <aside class="side-note">
-            <h2>Швидкі посилання</h2>
-            <ul>
-                <li><a href="places.html">Переглянути цікаві місця</a></li>
-                <li><a href="contacts.html">Написати повідомлення</a></li>
-                <li><a href="#top">Повернутися вгору</a></li>
+        <aside class="layout__aside aside">
+            <h2 class="aside__title">Навігація</h2>
+            <ul class="aside__list">
+                <li><a href="places.html">Цікаві місця</a></li>
+                <li><a href="route.html">Маршрут на день</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="#top">Вгору</a></li>
             </ul>
         </aside>
 
-        <section id="info" class="content-block">
-            <h2>Корисна інформація</h2>
-            <table>
+        <section class="layout__info card">
+            <h2 class="card__title">Корисна інформація</h2>
+
+            <table class="info-table">
                 <thead>
                     <tr>
                         <th>Розділ</th>
@@ -132,31 +91,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Місто</td>
-                        <td>Загальна інформація про Стрий</td>
-                        <td><a href="index.html">Головна</a></td>
+                        <td>Головна</td>
+                        <td>Загальна інформація про сайт</td>
+                        <td><a href="index.html">Відкрити</a></td>
                     </tr>
                     <tr>
-                        <td>Туризм</td>
-                        <td>Місця для прогулянок і відпочинку</td>
-                        <td><a href="places.html">Цікаві місця</a></td>
+                        <td>Цікаві місця</td>
+                        <td>Місця для прогулянок у Стрию</td>
+                        <td><a href="places.html">Відкрити</a></td>
                     </tr>
                     <tr>
-                        <td>Зв’язок</td>
-                        <td>Форма для повідомлень</td>
-                        <td><a href="contacts.html">Контакти</a></td>
+                        <td>Маршрут</td>
+                        <td>Приклад маршруту для туриста</td>
+                        <td><a href="route.html">Відкрити</a></td>
                     </tr>
                 </tbody>
             </table>
         </section>
-
     </main>
 
-    <footer class="site-footer">
-        <p>&copy; 2026 Туристичний сайт міста Стрий</p>
-        <p><a href="#top">До початку сторінки</a></p>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2026 Туристичний сайт міста Стрий</p>
     </footer>
-    
 </body>
 
 </html>
