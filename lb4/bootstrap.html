@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- viewport потрібен, щоб Bootstrap-сітка нормально працювала на телефоні -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Лабораторна робота №4 Bootstrap 4 для туристичного сайту міста Стрий">
+    <meta name="keywords" content="Bootstrap 4, Стрий, лабораторна робота, адаптивна сітка">
+    <meta name="author" content="Студент">
+
+    <title>Bootstrap 4 | Варіант 4</title>
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Старі стилі сайту з попередніх лабораторних -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Стилі тільки для четвертої лабораторної -->
+    <link rel="stylesheet" href="bootstrap-lab.css">
+</head>
+
+<body id="top">
+    <header class="site-header">
+        <h1 class="site-header__title">Туристичний сайт міста Стрий</h1>
+        <p class="site-header__text">Лабораторна робота №4. Bootstrap 4. Варіант 4</p>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="index.html">Головна</a>
+                </li>
+
+                <li class="nav__item nav__item_dropdown">
+                    <a class="nav__link" href="places.html">Цікаві місця</a>
+                    <ul class="nav__submenu">
+                        <li><a class="nav__sublink" href="places.html#center">Центр</a></li>
+                        <li><a class="nav__sublink" href="places.html#parks">Парки</a></li>
+                        <li><a class="nav__sublink" href="places.html#architecture">Архітектура</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" href="route.html">Маршрут</a>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакти / JS</a>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" href="bootstrap.html">Bootstrap 4</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="fixed-badge">B4</div>
+
+    <main class="container bootstrap-page my-4">
+
+        <!-- РЯД 1: 4 блоки -->
+        <section id="row1" class="row bootstrap-lab-row mb-4">
+            <div class="col-12 col-sm-6 col-md-1 col-lg-3 mb-3">
+                <div class="bootstrap-block bootstrap-block-row1 h-100 p-3">
+                    <span class="bootstrap-block__number">1.1</span>
+                    <h2 class="bootstrap-block__title">Про сайт</h2>
+                    <p class="bootstrap-block__text">
+                        Туристичний сайт міста Стрий містить коротку інформацію для гостей міста,
+                        розділи з цікавими місцями, маршрутом та контактами.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-1 col-lg-3 mb-3">
+                <div class="bootstrap-block bootstrap-block-row1 h-100 p-3">
+                    <span class="bootstrap-block__number">1.2</span>
+                    <h2 class="bootstrap-block__title">Місто Стрий</h2>
+                    <p class="bootstrap-block__text">
+                        Стрий — місто у Львівській області, яке має зручне розташування,
+                        спокійну атмосферу та цікаві місця для прогулянок.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-1 col-lg-3 mb-3">
+                <div class="bootstrap-block bootstrap-block-row1 h-100 p-3">
+                    <span class="bootstrap-block__number">1.3</span>
+                    <h2 class="bootstrap-block__title">Цікаві місця</h2>
+                    <p class="bootstrap-block__text">
+                        На сайті виділено основні туристичні розділи: центр міста,
+                        парки, архітектурні об'єкти та місця для відпочинку.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-1 col-lg-3 mb-3">
+                <div class="bootstrap-block bootstrap-block-row1 h-100 p-3">
+                    <span class="bootstrap-block__number">1.4</span>
+                    <h2 class="bootstrap-block__title">Зворотний зв'язок</h2>
+                    <p class="bootstrap-block__text">
+                        У проєкті є сторінка контактів із формою, картою міста та
+                        JavaScript-можливостями з третьої лабораторної роботи.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- РЯД 2: 2 блоки, у другому є вкладені блоки -->
+        <section id="row2" class="row bootstrap-lab-row mb-4">
+            <div class="col-12 col-md-6 mb-3">
+                <div class="bootstrap-block bootstrap-block-row2 h-100 p-3">
+                    <span class="bootstrap-block__number">2.1</span>
+                    <h2 class="bootstrap-block__title">Туристичний маршрут</h2>
+                    <p class="bootstrap-block__text">
+                        Для відвідувачів міста можна скласти короткий маршрут:
+                        почати з центральної частини Стрия, потім перейти до парку
+                        та завершити прогулянку біля архітектурних об'єктів.
+                    </p>
+                    <a href="route.html" class="btn btn-outline-primary btn-sm">
+                        Перейти до маршруту
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+                <div class="bootstrap-block bootstrap-block-row2 h-100 p-3">
+                    <span class="bootstrap-block__number">2.2</span>
+                    <h2 class="bootstrap-block__title">Розділи для туриста</h2>
+                    <p class="bootstrap-block__text">
+                        У цьому блоці створено вкладений ряд Bootstrap. Усередині
+                        нього розміщено два тематичні блоки про Стрий по 3 колонки.
+                    </p>
+
+                    <div class="row bootstrap-nested-row">
+                        <div class="col-12 col-md-3 mb-3">
+                            <div class="bootstrap-nested-block h-100 p-3">
+                                <h3>Центр Стрия</h3>
+                                <p>
+                                    Короткий опис центральної частини міста для прогулянок.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-3 mb-3 d-none d-md-block">
+                            <div class="bootstrap-nested-block bootstrap-nested-block-hidden h-100 p-3">
+                                <h3>Історичні будівлі</h3>
+                                <p>
+                                    Цей блок зникає на sm згідно з умовою варіанту.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-none d-md-block">
+                            <div class="bootstrap-nested-empty h-100 p-3">
+                                Вільне місце у вкладеному рядку
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- РЯД 3: 1 блок на 5 колонок і 2 блоки по 2 колонки -->
+        <section id="row3" class="row bootstrap-lab-row mb-4">
+            <div class="col-12 d-block d-sm-none mb-3">
+                <div class="bootstrap-empty-space p-3">
+                    Місце для туристичного банера про Стрий на xs-екрані
+                </div>
+            </div>
+
+            <div class="col-sm-5 mb-3 d-none d-sm-block">
+                <div class="bootstrap-block bootstrap-block-row3-main h-100 p-3">
+                    <span class="bootstrap-block__number">3.1</span>
+                    <h2 class="bootstrap-block__title">Туристична довідка про Стрий</h2>
+                    <p class="bootstrap-block__text">
+                        Стрий може бути цікавим для короткої подорожі, прогулянок
+                        центральною частиною міста, знайомства з місцевою архітектурою
+                        та відпочинку у зелених зонах.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-2 mb-3">
+                <div class="bootstrap-block bootstrap-block-row3-small h-100 p-3">
+                    <span class="bootstrap-block__number">3.2</span>
+                    <h2 class="bootstrap-block__title">Парки</h2>
+                    <p class="bootstrap-block__text">
+                        Паркові зони підходять для спокійного відпочинку,
+                        прогулянок і фотографій.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-2 mb-3">
+                <div class="bootstrap-block bootstrap-block-row3-small h-100 p-3">
+                    <span class="bootstrap-block__number">3.3</span>
+                    <h2 class="bootstrap-block__title">Архітектура</h2>
+                    <p class="bootstrap-block__text">
+                        Архітектурні об'єкти міста відображають історію
+                        та розвиток Стрия.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">
+            <a href="index.html">На головну</a> |
+            <a href="#top">До початку сторінки</a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

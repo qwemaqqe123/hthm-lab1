@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Цікаві місця Стрия">
+    <meta name="keywords" content="Стрий, парк, центр, архітектура">
+    <meta name="author" content="Студент">
+    <title>Цікаві місця Стрия</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+    <header class="site-header">
+        <h1 class="site-header__title">Цікаві місця Стрия</h1>
+        <p class="site-header__text">Сторінка побудована за допомогою CSS Grid</p>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Головна</a></li>
+
+                <li class="nav__item nav__item_dropdown">
+                    <a class="nav__link" href="places.html">Цікаві місця</a>
+                    <ul class="nav__submenu">
+                        <li><a class="nav__sublink" href="#center">Центр</a></li>
+                        <li><a class="nav__sublink" href="#parks">Парки</a></li>
+                        <li><a class="nav__sublink" href="#architecture">Архітектура</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav__item"><a class="nav__link" href="route.html">Маршрут</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="fixed-badge">Місця</div>
+
+    <main class="layout layout_places">
+        <section class="layout__intro card">
+            <h2 class="card__title">Що можна подивитися?</h2>
+            <p class="card__text">
+                У Стрию можна прогулятися центральними вулицями, побачити
+                архітектуру міста та відвідати зелені зони для відпочинку.
+            </p>
+        </section>
+
+        <section id="center" class="place-card">
+            <img class="place-card__image" src="images/square.jpg" alt="Центр міста Стрий">
+            <h2 class="place-card__title">Центр міста</h2>
+            <p class="place-card__text">
+                Центральна частина міста підходить для прогулянок, зустрічей
+                і знайомства з атмосферою Стрия.
+            </p>
+        </section>
+
+        <section id="parks" class="place-card">
+            <img class="place-card__image" src="images/park.jpg" alt="Парк у Стрию">
+            <h2 class="place-card__title">Парки</h2>
+            <p class="place-card__text">
+                Зелені зони підходять для спокійного відпочинку, прогулянок
+                і фотографій.
+            </p>
+        </section>
+
+        <section id="architecture" class="place-card">
+            <img class="place-card__image" src="images/church.jpg" alt="Архітектура Стрия">
+            <h2 class="place-card__title">Архітектура</h2>
+            <p class="place-card__text">
+                Архітектурні об’єкти міста відображають його історію
+                та культурний розвиток.
+            </p>
+        </section>
+
+        <aside class="layout__aside aside">
+            <h2 class="aside__title">Порада туристу</h2>
+            <p class="aside__text">
+                Перед прогулянкою краще скласти короткий маршрут і вибрати
+                кілька основних місць для відвідування.
+            </p>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">
+            <a href="index.html">На головну</a> |
+            <a href="#top">До початку сторінки</a>
+        </p>
+    </footer>
+</body>
+
+</html>

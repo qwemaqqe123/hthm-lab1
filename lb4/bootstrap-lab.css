@@ -1,0 +1,139 @@
+
+.bootstrap-page {
+    max-width: 1200px;
+}
+
+
+.bootstrap-lab-row {
+    border: 2px dashed #9fb8ad;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.72);
+}
+
+
+.bootstrap-block {
+    border: 2px solid #d5e1df;
+    border-radius: 12px;
+    min-height: 155px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: 0.25s;
+}
+
+.bootstrap-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+.bootstrap-block__number {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-bottom: 8px;
+    background-color: #2f5d62;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.bootstrap-block__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2f5d62;
+}
+
+
+.bootstrap-block__text {
+    line-height: 1.5;
+}
+
+
+.bootstrap-block-row1 {
+    border-left: 6px solid #2f5d62;
+    background-color: #f1f8f6;
+}
+
+
+.bootstrap-block-row2 {
+    border-left: 6px solid #5e8b7e;
+    background-color: #ffffff;
+}
+
+.bootstrap-block-row3-main {
+    border-left: 6px solid #b85c38;
+    background-color: #fff7ed;
+}
+
+.bootstrap-block-row3-small {
+    border-left: 6px solid #2f5d62;
+    background-color: #eef7f4;
+}
+
+.bootstrap-nested-row {
+    margin-top: 12px;
+}
+
+
+.bootstrap-nested-block {
+    min-height: 120px;
+    border: 2px solid #5e8b7e;
+    border-radius: 10px;
+    background-color: #dfeeea;
+}
+
+.bootstrap-nested-block h3 {
+    font-size: 17px;
+    font-weight: bold;
+    color: #2f5d62;
+}
+
+.bootstrap-nested-block p {
+    margin-bottom: 0;
+}
+
+.bootstrap-nested-block-hidden {
+    border-color: #b85c38;
+    background-color: #f8dfd0;
+}
+
+.bootstrap-nested-empty {
+    min-height: 120px;
+    border: 2px dashed #9fb8ad;
+    border-radius: 10px;
+    color: #5e8b7e;
+    background-color: rgba(223, 238, 234, 0.5);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bootstrap-empty-space {
+    min-height: 150px;
+    border: 2px dashed #b85c38;
+    border-radius: 12px;
+    background-color: rgba(184, 92, 56, 0.12);
+    color: #b85c38;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.bootstrap-page code {
+    color: #b85c38;
+    font-weight: bold;
+}
+
+@media (max-width: 575.98px) {
+    .bootstrap-lab-row {
+        padding: 10px;
+    }
+
+    .bootstrap-block {
+        min-height: 120px;
+    }
+}
