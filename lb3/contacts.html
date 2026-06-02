@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакти туристичного сайту міста Стрий з JavaScript">
+    <meta name="keywords" content="Стрий, контакти, форма, JavaScript, DOM">
+    <meta name="author" content="Студент">
+    <title>Контакти | JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+    <header class="site-header">
+        <h1 class="site-header__title">Контакти</h1>
+        <p class="site-header__text">Форма зворотного зв’язку, карта міста та JavaScript-можливості</p>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="index.html">Головна</a>
+                </li>
+
+                <li class="nav__item nav__item_dropdown">
+                    <a class="nav__link" href="places.html">Цікаві місця</a>
+                    <ul class="nav__submenu">
+                        <li><a class="nav__sublink" href="places.html#center">Центр</a></li>
+                        <li><a class="nav__sublink" href="places.html#parks">Парки</a></li>
+                        <li><a class="nav__sublink" href="places.html#architecture">Архітектура</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" href="route.html">Маршрут</a>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакти</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="fixed-badge">JS</div>
+
+    <main class="contact-grid">
+        <section class="contact-grid__form card">
+            <h2 class="card__title">Зворотний зв’язок</h2>
+            <p class="card__text">
+                Заповніть форму, якщо хочете поставити питання або запропонувати
+                місце для додавання на туристичний сайт міста Стрий.
+            </p>
+
+            <form action="#" method="post" class="form" id="tourForm">
+                <label class="form__label" for="name">Ім’я:</label>
+                <input class="form__field" type="text" id="name" name="name" required maxlength="40"
+                    placeholder="Введіть ваше ім’я">
+
+                <label class="form__label" for="email">Email:</label>
+                <input class="form__field" type="email" id="email" name="email" required
+                    placeholder="example@gmail.com">
+
+                <label class="form__label" for="phone">Телефон:</label>
+                <input class="form__field" type="tel" id="phone" name="phone" pattern="[0-9+() -]{10,20}" required
+                    placeholder="+380 XX XXX XX XX">
+
+                <label class="form__label" for="site">Ваш сайт або сторінка:</label>
+                <input class="form__field" type="url" id="site" name="site" placeholder="https://example.com">
+
+                <label class="form__label" for="date">Дата поїздки:</label>
+                <input class="form__field" type="datetime-local" id="date" name="date" required>
+
+                <label class="form__label" for="message">Повідомлення:</label>
+                <textarea class="form__field form__field_textarea" id="message" name="message" rows="6" maxlength="350"
+                    required placeholder="Напишіть ваше повідомлення"></textarea>
+
+                <button class="form__button" type="submit">Надіслати</button>
+                <button class="form__button form__button_reset" type="reset">Очистити</button>
+
+                <div id="formResult" class="result-box"></div>
+            </form>
+        </section>
+
+        <aside class="contact-grid__aside aside">
+            <h2 class="aside__title">Інформація</h2>
+            <p class="aside__text"><strong>Місто:</strong> Стрий</p>
+            <p class="aside__text"><strong>Область:</strong> Львівська область</p>
+            <p class="aside__text"><strong>Email:</strong> stryj-tour@example.com</p>
+        </aside>
+
+        <section class="contact-grid__js card">
+            <h2 class="card__title">JavaScript-можливості сторінки</h2>
+            <p class="card__text">
+                На цій сторінці додано інтерактивні елементи за допомогою JavaScript:
+                роботу з DOM, події, таймери, cookie та зміну CSS-властивостей.
+            </p>
+
+            <article class="js-task">
+                <h3>1. Виведення тексту з вибраним розміром шрифту</h3>
+
+                <label class="form__label" for="textInput">Текст:</label>
+                <input class="form__field" type="text" id="textInput" value="Ласкаво просимо до Стрия">
+
+                <label class="form__label" for="sizeInput">Розмір шрифту:</label>
+                <input class="form__field" type="number" id="sizeInput" value="24" min="10" max="60">
+
+                <button class="form__button" type="button" onclick="showTextWithSize()">Показати</button>
+
+                <div id="fontResult" class="result-box"></div>
+            </article>
+
+            <article class="js-task">
+                <h3>2. Картинка, яка змінює місце кожну секунду</h3>
+
+                <div class="image-area">
+                    <img id="movingImage" class="moving-image" src="images/stryj-main.jpg" alt="Стрий">
+                </div>
+
+                <button class="form__button" type="button" onclick="startMovingImage()">Запустити</button>
+                <button class="form__button form__button_reset" type="button"
+                    onclick="stopMovingImage()">Зупинити</button>
+            </article>
+
+            <article class="js-task">
+                <h3>3. Зміна розміру всіх абзаців на сторінці</h3>
+
+                <p>Стрий — місто у Львівській області.</p>
+                <p>Сайт містить інформацію для туристів і гостей міста.</p>
+                <p>JavaScript дозволяє змінювати сторінку без перезавантаження.</p>
+
+                <button class="form__button" type="button" onclick="changeParagraphsSize()">Змінити всі абзаци</button>
+            </article>
+
+            <article class="js-task">
+                <h3>4. Текстовий годинник</h3>
+                <div id="clock" class="clock">00:00:00</div>
+            </article>
+
+            <article class="js-task">
+                <h3>5. Поступове витирання частини документа</h3>
+
+                <div id="wipeBlock" class="wipe-block">
+                    Цей блок поступово зникає за допомогою JavaScript-таймера.
+                </div>
+
+                <button class="form__button" type="button" onclick="startWipeEffect()">Запустити ефект</button>
+                <button class="form__button form__button_reset" type="button" onclick="resetWipeEffect()">Повернути
+                    блок</button>
+            </article>
+
+            <article class="js-task">
+                <h3>6. Вибір кольору для квадрата</h3>
+
+                <label class="form__label" for="colorSelect">Оберіть колір:</label>
+                <select class="form__field" id="colorSelect" onchange="changeSquareColor()">
+                    <option value="black">Чорний</option>
+                    <option value="red">Червоний</option>
+                    <option value="green">Зелений</option>
+                    <option value="blue">Синій</option>
+                    <option value="orange">Помаранчевий</option>
+                </select>
+
+                <div id="colorSquare" class="color-square"></div>
+            </article>
+
+            <article class="js-task">
+                <h3>7. Координати мишки та натиснута клавіша</h3>
+
+                <div id="eventInfo" class="result-box">
+                    Координати мишки: X = 0, Y = 0<br>
+                    Натиснута клавіша: -
+                </div>
+            </article>
+
+            <article class="js-task">
+                <h3>8. Зміна розміру тексту A+ / A- із cookie</h3>
+
+                <button class="form__button" type="button" onclick="increaseFont()">A+</button>
+                <button class="form__button form__button_reset" type="button" onclick="decreaseFont()">A-</button>
+
+                <p id="resizableText" class="resizable-text">
+                    Розмір цього тексту можна змінити. Обране значення зберігається у cookie.
+                </p>
+            </article>
+
+            <article class="js-task">
+                <h3>9. Розрахунок переплати по кредиту</h3>
+
+                <p>
+                    Дано: сума кредиту 1 000 000 грн, відсоток 10%, термін 5 років.
+                </p>
+
+                <button class="form__button" type="button" onclick="calculateCredit()">Розрахувати</button>
+
+                <div id="creditResult" class="result-box"></div>
+            </article>
+        </section>
+
+        <section class="contact-grid__map card">
+            <h2 class="card__title">Карта міста</h2>
+            <p class="card__text">
+                Нижче розміщено фрейм з картою міста Стрий.
+            </p>
+
+            <iframe class="map"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=23.819%2C49.245%2C23.880%2C49.275&amp;layer=mapnik"
+                title="Карта міста Стрий">
+            </iframe>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">
+            <a href="index.html">На головну</a> |
+            <a href="#top">До початку сторінки</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

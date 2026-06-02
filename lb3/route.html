@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Туристичний маршрут містом Стрий">
+    <meta name="keywords" content="Стрий, маршрут, туризм, CSS Grid">
+    <meta name="author" content="Студент">
+    <title>Маршрут містом Стрий</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+    <header class="site-header">
+        <h1 class="site-header__title">Маршрут містом Стрий</h1>
+        <p class="site-header__text">Приклад додаткової сторінки з CSS Grid Layout</p>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Головна</a></li>
+                <li class="nav__item"><a class="nav__link" href="places.html">Цікаві місця</a></li>
+                <li class="nav__item"><a class="nav__link" href="route.html">Маршрут</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="fixed-badge">Route</div>
+
+    <main class="route">
+        <section class="route__header card">
+            <h2 class="card__title">Маршрут на один день</h2>
+            <p class="card__text">
+                Ця сторінка показує приклад сітки: великий заголовок,
+                кілька карток маршруту, боковий блок і нижній інформаційний блок.
+            </p>
+        </section>
+
+        <section class="route__step route__step_first">
+            <h3 class="route__title">1. Центр міста</h3>
+            <p class="route__text">Почати прогулянку можна з центральної частини Стрия.</p>
+        </section>
+
+        <section class="route__step route__step_second">
+            <h3 class="route__title">2. Парк</h3>
+            <p class="route__text">Далі можна відвідати зелену зону для відпочинку.</p>
+        </section>
+
+        <section class="route__step route__step_third">
+            <h3 class="route__title">3. Архітектура</h3>
+            <p class="route__text">Після цього варто подивитися історичні будівлі міста.</p>
+        </section>
+
+        <aside class="route__aside aside">
+            <h2 class="aside__title">Час маршруту</h2>
+            <ul class="aside__list">
+                <li>Центр — 40 хвилин</li>
+                <li>Парк — 1 година</li>
+                <li>Архітектура — 50 хвилин</li>
+            </ul>
+        </aside>
+
+        <section class="route__footer card">
+            <h2 class="card__title">Підсумок</h2>
+            <p class="card__text">
+                Така сторінка демонструє роботу CSS Grid: елементи розташовані
+                в різних областях сітки та адаптуються під розмір екрана.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">
+            <a href="index.html">На головну</a> |
+            <a href="#top">До початку сторінки</a>
+        </p>
+    </footer>
+</body>
+
+</html>
